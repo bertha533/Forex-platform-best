@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BerthaFXPro Ultimate Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>📈 BerthaFXPro Ultimate Dashboard</h1>
+    <div class="settings">
+      <label for="pair">Pair:</label>
+      <select id="pair"><option>EUR/USD</option><option>GBP/USD</option><option>USD/ZAR</option></select>
+      <label for="timeframe">Timeframe:</label>
+      <select id="timeframe"><option>1m</option><option>5m</option><option>15m</option></select>
+    </div>
+    <div id="signal-box">
+      <h2>💡 Signal: <span id="signal">Loading...</span></h2>
+      <p>Confidence: <span id="confidence">--%</span></p>
+      <p>SL: <span id="sl">--</span> | TP: <span id="tp">--</span></p>
+    </div>
+    <div id="history-log">
+      <h3>📜 Signal History</h3><ul id="history"></ul>
+    </div>
+    <div id="journal">
+      <h3>📓 Trade Journal</h3>
+      <textarea id="notes" placeholder="Write your trade notes here…"></textarea>
+      <button onclick="saveNote()">Save Note</button>
+      <div id="saved-notes"></div>
+    </div>
+    <button onclick="toggleDarkMode()">🌓 Toggle Dark Mode</button>
+    <p class="note">🔧 Live data & Telegram alerts coming soon—fully scalable.</p>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
